@@ -41,4 +41,4 @@ def perform_chi2_test(empirical_values: List[float], compute_probability: Callab
 
     expected_values_by_bins = bins_expected_frequency(compute_probability, len(empirical_values), bins)
 
-    return chi2_test(empirical_values_by_bins, expected_values_by_bins), empirical_values, expected_values_by_bins, bins
+    return chi2_test(empirical_values_by_bins, expected_values_by_bins), empirical_values_by_bins, expected_values_by_bins, bins
