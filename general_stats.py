@@ -36,11 +36,9 @@ def bins_expected_frequency(compute_probability: Callable[[float, float], float]
     return [compute_probability(a, b) * n for a,b in pairwise(bins)]
 
 
-"""
-f: partial function of "bins_expected_frequency".
-"""
-def perform_chi2_test(uniform_values: List[float], compute_probability: Callable[[float, float], List[float]]):
-    empirical_values, bins, patches = plt.hist(uniform_values)
+def perform_chi2_test(empirical_values: List[float], compute_probability: Callable[[float, float], List[float]]):
+    empirical_values_by_bins, bins, patches = plt.hist(empirical_values)
 
-    expected_values = bins_expected_frequency(compute_probability, len(uniform_values), bins)
-    return chi2_test(empirical_values, expected_values), empirical_values, expected_values, bins
+    expected_values_by_bins = bins_expected_frequency(compute_probability, len(empirical_values), bins)
+
+    return chi2_test(empirical_values_by_bins, expected_values_by_bins), empirical_values, expected_values_by_bins, bins
