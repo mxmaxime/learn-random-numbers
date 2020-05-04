@@ -1,4 +1,13 @@
 """
+Pr(NbS <= N)
+N clients dans le système.
+/!\ inclus les clients en attente
+"""
+def pr_nbs(psi: float, N: int):
+    return 1 - psi ** (N+1)
+
+
+"""
 nbs = nb de clients dans le système
 """
 def e_nbs(psi: float) -> float:
