@@ -1,7 +1,7 @@
 from waiting_phenomenon.mm1 import *
 
-alpha = 2
-mu = 3
+alpha = 4.5
+mu = 6
 psi = alpha/mu
 
 clients = 'clients'

@@ -1,10 +1,10 @@
 import numpy as np
 
-initial = np.array([1, 0, 0])
+initial = np.array([50/100, 40/100, 10/100])
 
 print(f'PI(0) = {initial}')
 
-transition_matrix = np.array([[2/3, 1/3, 0],[1/4, 1/2, 1/4], [1/2, 1/2, 0]])
+transition_matrix = np.array([[30/100, 50/100, 20/100],[30/100, 40/100, 30/100], [0, 60/100, 40/100]])
 
 print(f'Matrice de transition: \n {transition_matrix}')
 # values, vectors = np.linalg.eig(transition_matrix)
